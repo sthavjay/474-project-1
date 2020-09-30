@@ -3,4 +3,4 @@ Mason Godfrey (mgodfrey@csu.fullerton.edu)
 Bijaya Shrestha (sthavjay@csu.fullerton.edu)
 
 we have used eclipse software to create c++ file and ran it. 
-
+To run the program, Simpley build the project and hit the run icon in eclipse. 

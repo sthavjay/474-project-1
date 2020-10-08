@@ -1,24 +1,28 @@
-/*
- * AlgorithmCalculate.h
- *
- *  Created on: Sep 23, 2020
- *      Author: bijay
- */
-
 #ifndef ALGORITHMCALCULATE_H_
 #define ALGORITHMCALCULATE_H_
 
 #include "header.h"
-#include <string>
+
+/************************************************************************
+ * Project 1 * CPSC 474 (M/W 8:30AM) * Professor Doina Bein * 10/9/2020 *
+ ************************************************************************
+ * Mason Godfrey (mgodfrey@csu.fullerton.edu)
+ * Bijaya Shrestha (sthavjay@csu.fullerton.edu)
+ ************************************************************************
+ * AlgorithmCalculate
+ ************************************************************************
+ *
+ * AlgorithmCalculate(string eventSequence[][col]) - Returns integer
+ * Calculates and outputs the LC-Values of a Matrix of Events.
+ * eventSequence - Contains Matrix of Events to output.
+ *
+ ************************************************************************/
+
 int AlgorithmCalculate(string eventSequence[][col])
 {
 	int k = 0; //k is the value immediately before a in the same row
 	int logicClock[row][col];	//This will store our logic clock
 
-
-	/******
-	 * PROBLEM 1
-	 ******/
 	int responsePts[row];
 
 	//Initialize logicClocks to 0, Initialize responsePts to -1
@@ -74,13 +78,7 @@ int AlgorithmCalculate(string eventSequence[][col])
 	}
 
 	//Output the logicClock
-	for(int i = 0; i < row; i++)
-	{
-		for(int j = 0; j < col; j++)
-			cout << setw(5) << logicClock[i][j];
-
-		cout << endl;
-	}
+	OutputArray(logicClock, "The output is:");
 	return 0;
 }
 

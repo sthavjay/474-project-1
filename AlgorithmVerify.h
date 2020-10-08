@@ -1,14 +1,24 @@
-/*
- * AlgorithmVerify.h
- *
- *  Created on: Sep 23, 2020
- *      Author: bijay
- */
-
 #ifndef ALGORITHMVERIFY_H_
 #define ALGORITHMVERIFY_H_
 
 #include "header.h"
+
+/************************************************************************
+ * Project 1 * CPSC 474 (M/W 8:30AM) * Professor Doina Bein * 10/9/2020 *
+ ************************************************************************
+ * Mason Godfrey (mgodfrey@csu.fullerton.edu)
+ * Bijaya Shrestha (sthavjay@csu.fullerton.edu)
+ ************************************************************************
+ * AlgorithmVerify.h
+ ************************************************************************
+ *
+ * AlgorithmVerify(int logicClock[][col]) - Returns integer
+ * Verifies that a matrix of LC values is possible. If it is, output the
+ * sequence of events. If it is not, output "The output is INCORRECT"
+ * and return unsuccessfully.
+ * logicClock - Contains LC-values to verify.
+ *
+ ************************************************************************/
 
 int AlgorithmVerify(int logicClock[][col])
 {
@@ -16,12 +26,6 @@ int AlgorithmVerify(int logicClock[][col])
 
 	int sequence = 0;
 	int max = 0;
-
-	//Make sure the matrix is possible
-
-	/******
-	 * PROBLEM 2
-	 ******/
 
 	//Verify that the problem is possible
 	int sequenceChanged = true;	//Check whether we're still incrementing sequence
@@ -135,13 +139,7 @@ int AlgorithmVerify(int logicClock[][col])
 			}
 
 	//Output the logicClock
-	for(int i = 0; i < row; i++)
-	{
-		for(int j = 0; j < col; j++)
-			cout << setw(5) << eventSequence[i][j];
-
-		cout << endl;
-	}
+	OutputArray(eventSequence, "The output is:");
 	return 0;
 }
 
